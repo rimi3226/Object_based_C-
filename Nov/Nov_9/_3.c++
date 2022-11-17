@@ -36,7 +36,7 @@ int main(){
     //Dynamic Cast
     //Child* c=dynamic_cast<Child*>(p);
 
-    c->x=50;
-    c->y=999;
+    //c->x=50;
+    //c->y=999;
 
 }
