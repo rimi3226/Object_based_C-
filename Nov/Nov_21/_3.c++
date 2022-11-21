@@ -44,6 +44,7 @@ class MyItem{
         k=99;
     }
     void show(){
+
         cout<< k << endl;
     }
 };
@@ -60,7 +61,7 @@ int main(){
     //1단계: int를 data로 갖는 class를 class template으로부터 만든다.
     //2단계: 만들어진 클래스 Box<int>로부터 객체를 만든다.
     vector<int> v={1,2,3,4,5}; //얘는 class template이 아니다.
-    Box<int> b(10); //class template
+    Box<int> b{10}; //class template
     
     //=================================
     Box<MyItem> my_box;
