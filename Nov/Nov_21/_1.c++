@@ -9,6 +9,13 @@ int main(){
     try{
         cout<<v.at(0)<<endl;
         cout<<v.at(10)<<endl;
+        v.resize(v.max_size()+1);
+    }
+    catch(length_error& e){
+        cout<<"me : "<<e.what()<<endl;
+    }
+    catch(out_of_range& e){
+        cout<<"me : "<<e.what()<<endl;
     }
     catch(exception& e){
         cout<<e.what()<<endl;
