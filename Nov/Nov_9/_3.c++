@@ -34,9 +34,9 @@ int main(){
     Parent* p=new Parent();
 
     //Dynamic Cast
-    //Child* c=dynamic_cast<Child*>(p);
+    // Child *c=dynamic_cast<Child *>(p); //가상 함수가 없기 때문에 에러가 난다.
 
-    //c->x=50;
-    //c->y=999;
+    // c->x=50;
+    // c->y=999;
 
 }

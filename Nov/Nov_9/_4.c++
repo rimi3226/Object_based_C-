@@ -7,7 +7,7 @@ using namespace std;
 
 class Animal{
     public:
-    void speak(){
+    virtual void speak(){
         cout<<"Animal"<<endl;
     }
 };
@@ -28,8 +28,10 @@ int main(){
 
     //virtual: 나를 밟고 가시오, 혹시 상속받은 자식 중에 overriding된 것이 있으면 그것을 부르시오
     //dynamic binding: 어느 speak()이 불릴지는 runtime에 가봐야한다.
-    Animal* aa=new Dog();
-    aa->speak();
+    Animal* a2=new Dog();
+    a2->speak();
+
+    cout<<"==========="<<endl;
 
     Dog dd;
     Animal& aaa=dd;
