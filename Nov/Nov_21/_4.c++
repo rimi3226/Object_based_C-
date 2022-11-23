@@ -30,7 +30,7 @@ int main(){
     }
 
     
-    //list : double linked list
+    // list : double linked list
     //     : insertion, deletion 거의 일정
     //     : large memory
     //     : no default size

@@ -2,34 +2,61 @@
 
 using namespace std;
 
-class P2{
+class Shape{
 	public:
-	virtual ~P2(){
-		cout<<"P2 소멸자"<<endl;
+	virtual double getArea()=0;
+};
+
+class Triangle : public Shape{
+	private:
+	int width, height;
+	public:
+	Triangle(int _w,int _h): width(_w),height(_h){}
+	double getArea(){
+		return (double)(0.5*width*height);
 	}
 };
 
-class C2: public P2{
+class Circle: public Shape{
+	private:
+	double r;
+
 	public:
-	int* p;
-	C2(){
-	p=new int[40];
+	Circle(double _r):r(_r){}
+	double getArea(){
+		return (double)(3.14*r*r);
 	}
-	~C2(){
-		cout<<"C2 소멸자"<<endl;
+};
+
+class Rect : public Shape{
+	private:
+	int width, height;
+	public:
+	Rect(int _w,int _h):width(_w),height(_h){};
+	double getArea(){
+		return (double)(width*height);
 	}
 };
 
 int main(){
-	C2* c=new C2();
+	Triangle t(10,10);
+	t.getArea();
 
-	delete c;
-
-	cout<<"======"<<endl;
-
-	P2* p=new C2();
-
-	delete p;
+	Circle c(10.0);
+	c.getArea();
 	
-	return 0;
+	Rect r(20,10);
+	r.getArea();
+
+	Shape* s[3];
+
+	s[0]=&t;
+	s[1]=&c;
+	s[2]=&r;
+
+	for (int i = 0; i < 3; i++)
+	{
+		cout<<s[i]->getArea()<<endl;
+	}
+	
 }

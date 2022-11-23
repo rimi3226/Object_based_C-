@@ -11,21 +11,25 @@ using namespace std;
 int main(){
     ifstream is("binary.dat",ifstream::binary);
 
-    is.seekg(4,ios::beg); //파일 포인터를 움직이는 함수 
-    //읽는거 seekg, 쓰는거 seekp
+    is.seekg(4,ios::beg); //30
 
     int v;
-    is.read((char*)&v,4);
+    is.read((char*)&v,4); //30
+    cout<<"value is: "<<v<<endl;
 
     //ex
     int w;
-    is.seekg(4,ios::beg); //beginning
-    is.read((char*)&w,8);
-    is.seekg(4,ios::cur); //current
-    is.seekg(-4,ios::end); //end (파일 포인터 움직이기)
-
-    cout<<"value is: "<<v<<endl;
+    is.seekg(4,ios::beg); //20
+    is.read((char*)&w,8); //20
     cout<<"value is: "<<w<<endl;
+
+    is.seekg(4,ios::cur); //30
+    is.seekg(-4,ios::end); //40의 끝, 50의 시작
+
+    int r;
+    is.read((char*)&r,4);
+    cout<<"value is: "<<r<<endl;
+
 
 
 }

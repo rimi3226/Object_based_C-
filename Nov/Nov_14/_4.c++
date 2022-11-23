@@ -15,24 +15,28 @@ binary: 값 그대로
 using namespace std;
 
 int main(){
-    ofstream os("test.txt");
+    // ofstream os("test.txt");
 
-    for (int i = 0; i < 100; i++)
-    {
-        os<<i<<endl;
-    }
+    // for (int i = 0; i < 100; i++)
+    // {
+    //     os<<i<<endl;
+    // }
 
     ifstream is("test.txt");
     int number;
-    while(is>>number){
+
+    while(is){
+        is>>number;
         cout<<number;
     }
 
     char c;
+
     while(!is.eof()){
         is.get(c);
         cout<<c;
     }
+    
     return 0;
     
 }

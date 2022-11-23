@@ -26,7 +26,7 @@ using namespace std;
 class A{
     public:
         void show(){
-            cout<<'Class'<<endl;
+            cout<<"Class"<<endl;
             
 
         }       
@@ -44,9 +44,9 @@ int main(){
     B pb;
     A* pa;
 
-    pa=pb;
-    pa=show();
-    pb=show*();
+    *pa=pb;
+    pa->show();
+    pb.show();
 
 
 
