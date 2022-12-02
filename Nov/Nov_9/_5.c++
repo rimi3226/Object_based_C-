@@ -25,7 +25,7 @@ int main(){
 
     delete c;
 
-    P2* c=new C2();
+    P2* p=new C2();
 
     return 0;
 }
